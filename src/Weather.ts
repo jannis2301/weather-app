@@ -4,7 +4,7 @@ import {
   WeatherData,
   WEATHER_PROXY_HANDLER,
 } from './weather-data.ts'
-const apiKey = process.env.VITE_API_KEY
+const apiKey = import.meta.env.VITE_API_KEY
 
 export class Weather {
   private el: HTMLElement
