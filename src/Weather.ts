@@ -4,6 +4,7 @@ import {
   WeatherData,
   WEATHER_PROXY_HANDLER,
 } from './weather-data.ts'
+const apiKey = process.env.VITE_API_KEY
 
 export class Weather {
   private el: HTMLElement
@@ -55,9 +56,7 @@ export class Weather {
     }
     this.loading.style.display = 'block'
     this.weatherContainer.style.display = 'none'
-    const URL = `http://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&appid=${
-      import.meta.env.VITE_API_KEY
-    }`
+    const URL = `http://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&appid=${apiKey}`
     Http.fetchData(URL)
       .then((res: any) => {
         const weatherData = new WeatherData(
