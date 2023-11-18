@@ -10,18 +10,12 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
 
-    env:
-      VITE_API_KEY: ${{ secrets.VITE_API_KEY }}
-
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
 
       - name: Setup Node
         uses: actions/setup-node@v3
-
-      - name: Set Environment Variable
-        run: echo "VITE_API_KEY=${{ secrets.VITE_API_KEY }}" >> $GITHUB_ENV
 
       - name: Install dependencies
         run: npm install
