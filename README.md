@@ -1,6 +1,6 @@
 # **Weather App**
 
-An application that forecasts the weather for different cities
+An application that forecasts the weather for different cities.
 
 ## Table of Contents
 
@@ -17,3 +17,7 @@ The application retrieves data from the OpenWeather API. You can use an input el
 - CSS
 - Typescript
 - Vite
+
+## Sources
+
+If you want access to the API, get your own API-Key at [OpenWeather](https://openweathermap.org/).
