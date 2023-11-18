@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      env_var: ${{ vars.VITE_API_KEY }}
+      VITE_API_KEY: ${{ secrets.VITE_API_KEY }}
 
     steps:
       - name: Checkout repo
